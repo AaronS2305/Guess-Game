@@ -15,23 +15,6 @@ country_list = []
 num_infected = []
 max_length_list = 3
 
-
-'''Virus_data_collection = True
-
-while Virus_data_collection:
-  
-  name_country = str(input("Please enter the name of a country:"))
-  if name_country != "":  #Check that entry is valid
-    print("Invalid entry, please enter a valid country name")
-    country_list.append(name_country)
-    print(country_list)
-    infected_percent = ("Please enter the number of infected")
-    num_infected.append(infected_percent)
-    print(num_infected)
-  
-  Virus_data_collection = False'''
-
-
 name_country = ""
 
 while len(name_country) < max_length_list:
@@ -41,3 +24,8 @@ while len(name_country) < max_length_list:
   num_infected.append(infected_percent)
 
 print(country_list,"is the country and ", num_infected, "is the amount infected")
+
+def print_details(self):
+  details = "" + self.name_country + "currently has " + str(self.infected_percent) + "percent infected, and "
+  if self.is_in_lockdown == True:
+    details += "is in lockdown"
